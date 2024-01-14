@@ -119,6 +119,8 @@ body * {
     left: 0;
     z-index: 1;
     transform: translateY(-50%);
+
+    animation: slide-to-left 0.4s;
 }
 /* button:hover */
 #buttonContainer-btn:hover {
@@ -135,8 +137,7 @@ body * {
 }
 /* dark */
 #dark #buttonContainer-btn {
-    right: 0;
-    left: initial;
+    animation: slide-to-right 0.4s forwards;
 }
 
 /* -------- LINK LIST -------- */
@@ -222,4 +223,22 @@ body * {
 }
 
 
-/* --------------- DARK MODE --------------- */
+
+/* -------- ANIMATION -------- */
+@keyframes slide-to-right {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-to-left {
+    from {
+        left: 50%;
+    }
+    to {
+        left: 0;
+    }
+}
