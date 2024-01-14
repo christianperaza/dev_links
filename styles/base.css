@@ -65,7 +65,8 @@ body * {
 #container {
     /* border: 1px solid var(--border-item-list-color); */
     border-radius: 8px;
-    width: 360px;
+    width: 100%;
+    max-width: 588px;
     margin: 10px auto;
     padding: 24px 0;
 }
