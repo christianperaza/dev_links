@@ -7,8 +7,8 @@
 
 /* -------- LIGHT STYLES -------- */
 :root {
-    /* LIGHT background color */
-    --bg-color: radial-gradient(circle at right top, #7f29cfaa, white 50%);
+    /* LIGHT background url */
+    --bg-url: url(../assets/bg-mobile-light.jpg);
     /* LIGHT font color */
     --font-color: rgb(16, 16, 16);
     /* GENERAL font styles */
@@ -24,15 +24,15 @@
     /* LIGHT social links */
     --social-hover-bg: rgba(0, 0, 0, 0.10);
     /* LIGHT switch button */
-    --switch-logo: url(../assets/moon-stars.svg);
+    --switch-logo: url(../assets/sun.svg);
     --switch-span-border: rgba(0, 0, 0, 0.50);
     --switch-span-bg: rgba(0, 0, 0, 0.05);
 }
 
 /* -------- DARK STYLES -------- */
 #dark {
-    /* DARK background color */
-    --bg-color: radial-gradient(circle at right top, #7f29cf, rgb(16, 16, 16) 50%);
+    /* DARK background url */
+    --bg-url: url(../assets/bg-mobile-dark.jpg);
     /* DARK font color */
     --font-color: #fff;
     /* DARK list styles */
@@ -43,21 +43,18 @@
     /* DARK social links */
     --social-hover-bg: rgba(255, 255, 255, 0.20);
     /* DARK switch button */
-    --switch-logo: url(../assets/sun.svg);
+    --switch-logo: url(../assets/moon-stars.svg);
     --switch-span-border: rgba(255, 255, 255, 0.50);
-    --switch-span-bg: rgba(255, 255, 255, 0.10); 
+    --switch-span-bg: rgba(255, 255, 255, 0.10);
 }
 
 /* -------- BODY -------- */
-body {
-    background: var(--bg-color);
-    background-repeat: no-repeat;
-    height: 100%;
-    margin: 0;
-    background-attachment: fixed;
+#body {
+    background: var(--bg-url) no-repeat top center/cover;
+    height: 100vh;
 }
 /* font */
-body * {
+#body * {
     font-family: 'Inter', sans-serif;
 }
 
@@ -240,5 +237,17 @@ body * {
     }
     to {
         left: 0;
+    }
+}
+
+
+/* -------- MEDIA QUERIES -------- */
+@media (min-width: 700px) {
+    :root {
+        --bg-url: url(../assets/bg-desktop-light.jpg);
+    }
+
+    #dark {
+        --bg-url: url(../assets/bg-desktop-dark.jpg);
     }
 }
