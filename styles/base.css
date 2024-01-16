@@ -51,7 +51,7 @@
 /* -------- BODY -------- */
 #body {
     background: var(--bg-url) no-repeat top center/cover;
-    height: 100vh;
+    height: 100%;
 }
 /* font */
 #body * {
@@ -60,11 +60,10 @@
 
 /* -------- MAIN -------- */
 #container {
-    /* border: 1px solid var(--border-item-list-color); */
     border-radius: 8px;
     width: 100%;
     max-width: 588px;
-    margin: 10px auto;
+    margin: 30px auto;
     padding: 24px 0;
 }
 
